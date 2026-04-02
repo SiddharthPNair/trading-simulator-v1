@@ -1,1 +1,56 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --bg-0: #080c10;
+  --bg-1: #0d1117;
+  --bg-2: #161b22;
+  --bg-3: #1c2330;
+  --border: #21262d;
+  --border-bright: #30363d;
+  --text-0: #e6edf3;
+  --text-1: #8b949e;
+  --text-2: #484f58;
+  --green: #00ff88;
+  --green-dim: #00c96a;
+  --green-bg: rgba(0,255,136,0.07);
+  --red: #ff4560;
+  --red-dim: #d63251;
+  --red-bg: rgba(255,69,96,0.07);
+  --gold: #f0b429;
+  --blue: #58a6ff;
+  --font-display: 'Syne', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+html, body { height: 100%; background: var(--bg-0); color: var(--text-0); font-family: var(--font-mono); }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-1); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+
+button { cursor: pointer; font-family: var(--font-mono); }
+input { font-family: var(--font-mono); }
+
+/*
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyD7BPPcxYZItM7cCTTR7Qz4g4vJV6AR0i4",
+  authDomain: "trading-simulator-v1.firebaseapp.com",
+  projectId: "trading-simulator-v1",
+  storageBucket: "trading-simulator-v1.firebasestorage.app",
+  messagingSenderId: "361912027230",
+  appId: "1:361912027230:web:565d6b242fe314b6594ccf",
+  measurementId: "G-K89CWRKW6V"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+*/

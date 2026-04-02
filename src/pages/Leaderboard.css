@@ -1,0 +1,53 @@
+.leaderboard-page { max-width: 860px; margin: 0 auto; padding: 48px 24px; }
+.lb-hero { text-align: center; margin-bottom: 48px; }
+.lb-title { font-family: var(--font-display); font-size: 52px; font-weight: 800; letter-spacing: 8px; color: var(--text-0); }
+.lb-subtitle { font-size: 12px; letter-spacing: 3px; color: var(--text-2); margin-top: 8px; }
+.lb-loading { text-align: center; padding: 60px; }
+.lb-table-wrap { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.lb-table { width: 100%; border-collapse: collapse; }
+.lb-table thead tr { background: var(--bg-2); }
+.lb-table th { padding: 12px 20px; font-size: 9px; letter-spacing: 2px; color: var(--text-2); text-align: left; border-bottom: 1px solid var(--border); }
+.lb-table td { padding: 12px 20px; font-size: 13px; border-bottom: 1px solid var(--border); }
+.lb-table tr:last-child td { border-bottom: none; }
+.lb-table tr:hover td { background: var(--bg-2); }
+.lb-table tr.top-1 td { background: rgba(240,180,41,0.05); }
+.lb-table tr.top-2 td { background: rgba(139,148,158,0.04); }
+.lb-table tr.top-3 td { background: rgba(150,100,50,0.04); }
+.lb-table tr.is-me td { background: rgba(0,255,136,0.04); outline: 1px solid rgba(0,255,136,0.15); }
+.rank-cell { width: 60px; }
+.medal { font-size: 18px; color: var(--gold); }
+.rank-num { color: var(--text-2); font-size: 12px; }
+.trader-info { display: flex; align-items: center; gap: 10px; }
+.lb-avatar { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--border-bright); }
+.lb-avatar-fallback { width: 28px; height: 28px; border-radius: 50%; background: var(--bg-3); border: 1px solid var(--border-bright); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--green); }
+.name-cell { font-family: var(--font-display); font-weight: 600; font-size: 14px; }
+.you-badge { font-size: 9px; letter-spacing: 2px; background: var(--green-bg); color: var(--green); border: 1px solid var(--green); padding: 2px 6px; border-radius: 2px; }
+.pnl-cell { font-weight: 700; }
+.pnl-cell.pos { color: var(--green); }
+.pnl-cell.neg { color: var(--red); }
+.trades-cell, .avg-cell { color: var(--text-1); }
+/*```
+
+---
+
+## Firebase Setup (3 steps)
+
+**1. Enable Google Auth:**
+Firebase Console → Authentication → Sign-in method → Google → Enable
+
+**2. Create Firestore collections** (they auto-create on first write, but set rules):
+```
+// Firestore Rules
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /portfolios/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+    match /leaderboard/{uid} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}
+  */

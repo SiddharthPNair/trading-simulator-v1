@@ -1,0 +1,41 @@
+.trade-panel {
+  background: var(--bg-1); border: 1px solid var(--border);
+  border-radius: 4px; padding: 16px; display: flex; flex-direction: column; gap: 12px; height: 100%; overflow-y: auto;
+}
+.tp-header { display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: 2px; color: var(--text-2); }
+.tp-symbol { font-family: var(--font-display); font-size: 14px; font-weight: 700; color: var(--text-0); }
+.order-type-tabs, .side-tabs { display: flex; gap: 4px; }
+.ot-tab { flex: 1; padding: 6px; font-size: 10px; letter-spacing: 1px; background: var(--bg-2); border: 1px solid var(--border); color: var(--text-1); border-radius: 3px; transition: all 0.15s; cursor: pointer; }
+.ot-tab.active { background: var(--bg-3); border-color: var(--border-bright); color: var(--text-0); }
+.side-btn { flex: 1; padding: 10px; font-size: 12px; font-weight: 700; letter-spacing: 2px; border: none; border-radius: 3px; transition: all 0.15s; cursor: pointer; }
+.side-btn.buy { background: var(--bg-2); color: var(--green); border: 1px solid transparent; }
+.side-btn.buy.active { background: var(--green-bg); border-color: var(--green); }
+.side-btn.sell { background: var(--bg-2); color: var(--red); border: 1px solid transparent; }
+.side-btn.sell.active { background: var(--red-bg); border-color: var(--red); }
+.tp-info { background: var(--bg-2); border-radius: 3px; padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
+.tp-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-1); }
+.tp-row .val { color: var(--text-0); font-weight: 700; }
+.tp-row .val.pos { color: var(--green); }
+.tp-inputs { display: flex; flex-direction: column; gap: 8px; }
+.input-group { display: flex; flex-direction: column; gap: 4px; }
+.input-group label { font-size: 9px; letter-spacing: 2px; color: var(--text-2); }
+.input-group input { background: var(--bg-2); border: 1px solid var(--border); color: var(--text-0); padding: 8px 12px; border-radius: 3px; font-size: 13px; outline: none; transition: border 0.15s; }
+.input-group input:focus { border-color: var(--border-bright); }
+.tp-total { font-size: 11px; color: var(--text-1); text-align: right; }
+.tp-total strong { color: var(--text-0); }
+.execute-btn { width: 100%; padding: 14px; font-size: 13px; font-weight: 700; letter-spacing: 3px; border: none; border-radius: 4px; transition: all 0.2s; cursor: pointer; }
+.execute-btn.buy { background: var(--green); color: var(--bg-0); }
+.execute-btn.buy:hover { background: var(--green-dim); }
+.execute-btn.sell { background: var(--red); color: white; }
+.execute-btn.sell:hover { background: var(--red-dim); }
+.tp-msg { padding: 8px 12px; border-radius: 3px; font-size: 11px; }
+.tp-msg.success { background: var(--green-bg); color: var(--green); border: 1px solid var(--green); }
+.tp-msg.error { background: var(--red-bg); color: var(--red); border: 1px solid var(--red); }
+.tp-divider { border: none; border-top: 1px solid var(--border); }
+.tp-leaderboard-section { display: flex; flex-direction: column; gap: 8px; }
+.lb-user-info { display: flex; align-items: center; gap: 8px; }
+.lb-avatar { width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--border-bright); }
+.lb-username { font-size: 12px; color: var(--text-1); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lb-submit-btn { padding: 10px; font-size: 10px; letter-spacing: 2px; font-weight: 700; background: var(--bg-3); border: 1px solid var(--border-bright); color: var(--gold); border-radius: 3px; transition: all 0.15s; cursor: pointer; }
+.lb-submit-btn:hover:not(:disabled) { background: rgba(240,180,41,0.1); border-color: var(--gold); }
+.lb-submit-btn:disabled { opacity: 0.5; cursor: default; }
