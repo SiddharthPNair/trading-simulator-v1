@@ -13,18 +13,12 @@ import {
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyD7BPPcxYZItM7cCTTR7Qz4g4vJV6AR0i4",
-
-  authDomain: "trading-simulator-v1.firebaseapp.com",
-
-  projectId: "trading-simulator-v1",
-
-  storageBucket: "trading-simulator-v1.firebasestorage.app",
-
-  messagingSenderId: "361912027230",
-
-  appId: "1:361912027230:web:565d6b242fe314b6594ccf",
-
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-K89CWRKW6V"
 
 };
